@@ -39,6 +39,9 @@ export default function Dashboard() {
           <li>
             <Link href="/solicitudes">Solicitud-Transferencia</Link>
           </li>
+          <li>
+            <Link href="/caja">Cajas</Link>
+          </li>
         </ul>
         <div className={styles.userInfo}>
           <span>Bienvenido, {usuario}</span>

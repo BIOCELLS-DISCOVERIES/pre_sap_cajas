@@ -33,7 +33,7 @@ const Report = () => {
 }, [router]);
 const fetchItems = async () => {
   try {
-    const response = await axios.get("https://biocells-sap-test.onrender.com/items");
+    const response = await axios.get("https://pruebas-sap-back.onrender.com/items");
     console.log("Respuesta ítems:", response.data); // 👈 para depurar
     setItems(Array.isArray(response.data) ? response.data : []);
   } catch (error) {
@@ -44,7 +44,7 @@ const fetchItems = async () => {
 
 const fetchBodegas = async () => {
   try {
-    const response = await axios.get("https://biocells-sap-test.onrender.com/get-warehouses");
+    const response = await axios.get("https://pruebas-sap-back.onrender.com/get-warehouses");
     console.log("Respuesta bodegas:", response.data);
     setBodegasList(response.data.warehouses); // 👈 EXTRAER correctamente
   } catch (error) {
@@ -60,7 +60,7 @@ const fetchBodegas = async () => {
     }
     setError(null);
     try {
-      const response = await axios.get(`https://biocells-sap-test.onrender.com/reportinventario`, {
+      const response = await axios.get(`https://pruebas-sap-back.onrender.com/reportinventario`, {
         params: {
           fecha_actualizacion: fecha,
           codigo_item: codigoItem || undefined,

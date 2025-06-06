@@ -30,7 +30,7 @@ const Solicitud = () => {
   const cargarSolicitudesPendientes = () => {
   setIsLoading(true);
   const startTime = Date.now();
-  fetch('https://biocells-sap-test.onrender.com/check_inventory_transfer')
+  fetch('https://pruebas-sap-back.onrender.com/check_inventory_transfer')
     .then(res => res.json())
     .then(data => {
       console.log('Tiempo de respuesta:', Date.now() - startTime, 'ms');
@@ -47,7 +47,7 @@ const Solicitud = () => {
 
   // Al cargar las bodegas
 const cargarBodegas = () => {
-  fetch("https://biocells-sap-test.onrender.com/get-warehouses")
+  fetch("https://pruebas-sap-back.onrender.com/get-warehouses")
     .then(res => res.json())
     .then(data => {
       const bodegas = data.warehouses || []; // <-- arreglo correcto
@@ -74,7 +74,7 @@ const cargarBodegas = () => {
       return;
     }
 
-    fetch(`https://biocells-sap-test.onrender.com/get_inventory_transfer_detail/${solicitud.DocEntry}`)
+    fetch(`https://pruebas-sap-back.onrender.com/get_inventory_transfer_detail/${solicitud.DocEntry}`)
       .then(res => res.json())
       .then(data => {
         if (data.DocEntry) {
@@ -91,7 +91,7 @@ const cargarBodegas = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`https://biocells-sap-test.onrender.com/create_inventory_transfer/${docEntry}`, {
+      const response = await fetch(`https://pruebas-sap-back.onrender.com/create_inventory_transfer/${docEntry}`, {
         method: 'POST'
       });
 

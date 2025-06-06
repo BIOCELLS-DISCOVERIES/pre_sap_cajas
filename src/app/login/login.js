@@ -17,7 +17,7 @@ export default function Login() {
     setLoading(true); // Activar spinner
 
     try {
-      const response = await axios.post("https://biocells-sap-test.onrender.com/login", {
+      const response = await axios.post("https://pruebas-sap-back.onrender.com/login", {
         usuario,
         password,
       });

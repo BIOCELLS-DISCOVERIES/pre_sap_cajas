@@ -40,7 +40,7 @@ export default function UploadFile() {
     setMessage("");
 
     try {
-      const response = await fetch("https://biocells-sap-test.onrender.com/stock-transfer-archivo", {
+      const response = await fetch("https://pruebas-sap-back.onrender.com/stock-transfer-archivo", {
         method: "POST",
         body: formData,
       });
