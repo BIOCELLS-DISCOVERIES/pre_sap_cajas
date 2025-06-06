@@ -1,0 +1,112 @@
+/* Estilo general del contenedor */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f4f8;  /* Fondo suave, gris claro */
+    color: #333;  /* Texto oscuro para contraste */
+    font-family: 'Roboto', sans-serif;  /* Tipografía moderna */
+  }
+  
+  /* Barra de navegación */
+  .menu {
+    width: 100%;
+    background: #2C3E50;  /* Azul grisáceo oscuro */
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+  }
+  
+  /* Lista del menú */
+  .menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Ítems del menú */
+  .menu li {
+    display: inline;
+  }
+  
+  /* Enlaces del menú */
+  .menu a {
+    color: #ecf0f1;  /* Blanco suave */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background: #3498db;  /* Azul suave */
+    color: white;  /* Blanco al pasar el ratón */
+  }
+  
+  /* Sección de usuario */
+  .userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color:white;
+  }
+  
+  /* Botón de cerrar sesión */
+  .logoutButton {
+    background: #e74c3c;  /* Rojo suave */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .logoutButton:hover {
+    background: #c0392b;  /* Rojo más oscuro */
+    transform: scale(1.05);
+  }
+  
+  /* Contenido del dashboard */
+  .content {
+    margin-top: 140px; /* Ajuste para que no quede tapado */
+    text-align: center;
+    padding: 3rem;
+    width: 70%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: all 0.3s ease;
+  }
+  
+  .content:hover {
+    transform: translateY(-10px); /* Efecto sutil al pasar el ratón */
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2C3E50;  /* Título en color oscuro */
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: #7f8c8d;  /* Texto secundario en gris oscuro */
+  }
+  
