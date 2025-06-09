@@ -243,8 +243,8 @@ export default function Caja() {
         >
           <option value="">Seleccione una bodega</option>
           {bodegas.map((b) => (
-            <option key={b.WarehouseCode} value={b.WarehouseCode}>
-              {b.WarehouseCode} - {b.WarehouseName}
+            <option key={b.CodigoBodega} value={b.CodigoBodega}>
+              {b.CodigoBodega} - {b.NombreBodega}
             </option>
           ))}
         </select>
